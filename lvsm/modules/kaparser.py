@@ -24,7 +24,7 @@ def tokenize_config(configfile):
     ip4_class = Regex(r"\d{1,3}(\.\d{1,3}){3}\/\d{1,3}")
     ip6_class = Regex(r"[0-9a-fA-F:]+\/\d{1,3}")
     ip_class = ip4_class | ip6_class
-    ip_classaddr = ip_address | ip_class
+    ip_classaddr = ip_class | ip_address
 
     ip4_range = Regex(r"\d{1,3}(\.\d{1,3}){3}-\d{1,3}")
     # ip6_range = Regex(r"[0-9a-fA-F:]+\/\d{1,3}-\d{1,3}")
